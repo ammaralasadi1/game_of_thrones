@@ -3,7 +3,7 @@
 <ul>
   <% @characters.each do |character| %>
     <li>
-      <%= link_to "#{character.name} - #{character.house.name}", character %>
+      <%= link_to "#{character.name} - #{character.house.name}", character, class: "link-style" %>
     </li>
   <% end %>
 </ul>
