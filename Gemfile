@@ -48,6 +48,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'github-pages', group: :jekyll_plugins
+  gem "devise"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
