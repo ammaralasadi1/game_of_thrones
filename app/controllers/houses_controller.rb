@@ -8,8 +8,7 @@ class HousesController < ApplicationController
   end
 
   def create
-    @house = House.create!(house_params)
-
+    @house = current_user.houses.create!(house_params)
     redirect_to house_path(@house)
   end
 
@@ -18,9 +17,15 @@ class HousesController < ApplicationController
   end
 
 
-    def edit
-    @house = House.find(params[:id])
+  def edit
+  @house = House.find(params[:id])
+  if @house.user == current_user
+    @house.destroy
+  else
+    flash[:alert] = "Only the author of the house can delete"
   end
+  redirect_to houses_path
+end
 
 
   def update
@@ -31,10 +36,14 @@ class HousesController < ApplicationController
     end
 
     # destroy
-  def destroy
-    @house = House.find(params[:id])
-    @house.destroy
-    redirect_to houses_path
+    def destroy
+      @house = House.find(params[:id])
+      if @house.user == current_user
+        @house.destroy
+      else
+        flash[:alert] = "Only the author of the house can delete"
+      end
+      redirect_to new_user_session_path
     end
 
   private
