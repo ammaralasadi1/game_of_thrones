@@ -2,7 +2,7 @@ House.destroy_all
 Character.destroy_all
 
 house_arryn = House.create(name: 'House Arryn',location: "The Vale of Arryn", photo_url: "https://vignette4.wikia.nocookie.net/gameofthrones/images/1/15/House-Arryn-Main-Shield.PNG/revision/latest?cb=20170101094153")
-Character.create(name: "Robin Arryn", house_id: 1, photo_url: "https://vignette4.wikia.nocookie.net/gameofthrones/images/7/74/Robin_Aaryn_Book_of_Stranger.jpg/revision/latest/scale-to-width-down/309?cb=20160714005525")
+Character.create(name: "Peter Baliesh", house_id: 1, photo_url: "https://vignette3.wikia.nocookie.net/gameofthrones/images/b/b7/Petyr_Battle_of_Bastards_infobox_image.jpg/revision/latest/scale-to-width-down/608?cb=20160807090043")
 
 house_frey = House.create(name: 'House Frey',location: 'The Riverlands', photo_url: "https://vignette1.wikia.nocookie.net/gameofthrones/images/e/e6/House-Frey-Main-Shield.PNG/revision/latest?cb=20160312124244")
 Character.create(name: 'Roslin Tully', house_id: 2, photo_url: "https://vignette2.wikia.nocookie.net/gameofthrones/images/e/ea/Got-game-of-thrones-34775416-4256-2832.jpg/revision/latest/scale-to-width-down/350?cb=20161215030611")

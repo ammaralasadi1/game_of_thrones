@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20170426153929) do
     t.string   "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_houses_on_user_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|
@@ -50,4 +52,5 @@ ActiveRecord::Schema.define(version: 20170426153929) do
   end
 
   add_foreign_key "characters", "houses"
+  add_foreign_key "houses", "users"
 end

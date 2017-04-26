@@ -43,7 +43,7 @@ end
       else
         flash[:alert] = "Only the author of the house can delete"
       end
-      redirect_to new_user_session_path
+      redirect_to houses_path
     end
 
   private

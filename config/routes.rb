@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'houses#index'
   devise_for :users
   resources :houses do
     resources :characters
