@@ -5,7 +5,6 @@ class CreateHouses < ActiveRecord::Migration[5.0]
       t.string :location
       t.string :photo_url
 
-
       t.timestamps
     end
   end

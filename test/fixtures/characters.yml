@@ -3,9 +3,9 @@
 one:
   name: MyString
   photo_url: MyString
-  house: 
+  house: one
 
 two:
   name: MyString
   photo_url: MyString
-  house: 
+  house: two

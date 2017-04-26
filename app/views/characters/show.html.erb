@@ -1,0 +1,9 @@
+<h2><%= @character.name %><h2>
+<h3><%= link_to "Overthow the House", edit_house_character_path(@character.house, @character) %></h3>
+<h3><%= @character.house.name %></h3>
+
+<%= @character.name %></br>
+
+<img src="<%= @character.photo_url%>">
+
+<h3><%= link_to "Kill Or Recreate", edit_house_character_path(@character.house, @character) %></h3>

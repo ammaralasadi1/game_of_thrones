@@ -1,0 +1,20 @@
+
+<h1><%= @house.name %> </h2>
+<h2>Location: <%= @house.location %></h2>
+<h3><%= link_to "Overthow or Destroy", edit_house_path(@house) %></h3>
+
+<%= image_tag @house.photo_url, class: "house-photo" %>
+
+
+
+<h1>characters</h1>
+  <ul>
+  <% @house.characters.each do |character| %>
+      <h2><%= link_to "#{character.name}", house_character_path(@house, character)%></h2>
+
+      <%= image_tag character.photo_url, class: "character-photo" %>
+
+    <% end %>
+</ul>
+<h3><%= link_to "Create", new_house_character_path(@house) %></h3>
+<h3><%= link_to "Kill or Recreate", edit_house_character_path(@house) %></h3>

@@ -1,0 +1,7 @@
+
+
+<span><%= link_to "Add a House",new_house_path%><span>
+
+  <% @houses.each do |house| %>
+    <p calss="house"><%= link_to house.name, house %></p>
+  <% end %>
